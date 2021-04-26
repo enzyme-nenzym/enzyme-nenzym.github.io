@@ -4,18 +4,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="styles/style.css" />
-	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-	<script src="script.js"></script>
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/category.css" />
+    <link rel="stylesheet" href="styles/stat.css" />
+	  <link rel="stylesheet" href="styles/nav.css" />
+	 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	  <script src="script.js"></script>
 	  
+	  <link rel="preconnect" href="https://fonts.gstatic.com">
+	  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald&family=Playfair+Display:ital,wght@0,400;1,900&family=Quicksand&display=swap" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display&display=swap" rel="stylesheet">
+	  <script src="https://kit.fontawesome.com/4675587b1b.js" crossorigin="anonymous"></script>
 	  <script>
 	  $(document).ready(function(){
 // 		  REMOVE THE TRUE PLS ARCHEEE
-		if('<!-- |g_id| -->' == '2' || false) {
-			console.log("member desu")
+		if('<!-- |g_id| -->' == '2' || true) {
 			$('.for-members').addClass("display-none")
 			
 		} else {
-			console.log("guest desu")
 			$('.for-guest').addClass("display-none")
 		}
 	  }); 
@@ -24,159 +30,114 @@
   <!-- the ids are called cat-1 -->
 
   <body>
-	  <link rel="preconnect" href="https://fonts.gstatic.com" />
-	  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"/>
-	  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-	  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-	  <script src="https://kit.fontawesome.com/4675587b1b.js" crossorigin="anonymous"></script>
+	  
     <div id="wrapper">
-      <div id="header">
-        <div class="header-picture-zone">
-			<a href="index.php"><div class="header-zone-title">
-				<div>
-					lost in paradise
-				</div>
-			</div></a>
-			<div class="header-picture"></div>
-		  </div>
-
-        <div class="headerGrid">
-			<div class="textbox-1">
-                <div class="for-members" style="font-size:15px">
-					welcome back
-				</div>
-				<div class="for-guest">
-					welcome, welcome<br>
-					have a look around ♫
-				</div>
-				</a><div class="for-members logged-username">
-					<a href="profile.html"><b>marissa huddleston</b></a>
-				</div>
-				<img class="roundUser" src="https://i.imgur.com/Dxu9XRr.jpg"/></a>
-				<div class="for-members" >
-					<div id="change-subaccount">
-						<div class="forminput" style="width:200px;">
-							<select>
-								<option value="1">switch account</option>
-								<option value="2">Amir Lindell</option>
-								<option value="3">Albert Caldwell</option>
-							</select>
-			            </div>
-					</div>
+		<div class="site-title flex-center">old newspaper</div>
+        <div class="header">
+			<div class="header-box flex-center">
+				<div class="header-inner-box flex-center">
 					
-				</div>
-				<div class="for-guest log-register">
-					<a href="index.php?act=Login&CODE=00">log in</a> ・ <a href="index.php?act=Reg&CODE=00"><b>register</b></a> ・ <a href="index.php?act=Reg&CODE=reval">resend</a>
-				</div>
-			</div>
-        </div>
-        <div class="headerGrid">
-			<div class="textbox-1">
-				<div class="header-text-box">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at magna sit amet felis iaculis vestibulum vel vitae risus. Donec iaculis augue ut sem porttitor tincidunt. Praesent eleifend viverra ullamcorper. Mauris arcu mauris, sagittis eget justo eu, rutrum faucibus ligula. Donec a porttitor turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at magna sit amet felis iaculis vestibulum vel vitae risus. Donec iaculis augue ut sem porttitor tincidunt.
-				</div>
-			</div>
-		  </div>
-      </div>
-		<div class="infobar-1">
-			<div class="infobar-2">
-				<div class="infobar-info initial-menu-display " id="infobar-content-1">
-					<a class="infobar-module infobar-aesthetic" 
-					   href="http://google.com"
-					   style="background-image: url('https://i.imgur.com/iNM8Egm.png');">
-						
-					</a>
-					
-					<div class="infobar-module" id="infobar-newstext" style="margin-left: 10px;">
-						<div class="padded-box-1" id="infobar-newstext-content">
-							<div class="padded-box-2"> 
-								<b>February 1st, 2020</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae sapien vitae neque hendrerit interdum sit amet id mi. Nam varius arcu nec libero tempor viverra.
-								<br><br>
-								<b>February 1st, 2020</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae sapien vitae neque hendrerit interdum sit amet id mi. Nam varius arcu nec libero tempor viverra.
+					<div class="for-member display-none">
+						<div class="">
+						    welcome back!<br>
+							<b>marissa huddleston</b>
+						</div>
+						<div class="roundUser" style="background-image: url('https://i.imgur.com/z63b0sd.jpg')"></div>
+						<div class="">
+							<div id="change-subaccount">
+								<div class="forminput" style="width:200px;">
+									<select>
+										<option value="1">switch account</option>
+										<option value="2">Amir Lindell</option>
+										<option value="3">Albert Caldwell</option>
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				
-				<div class="infobar-info display-none" id="infobar-content-2">
-<!-- 					start here -->
-					<div class="infobar-module infobar-content-quicklink">
-						<div class="infobar-button">
-							Link  
-					    </div>
-						<div class="infobar-button">
-						    Setting
-					    </div>
-						<div class="infobar-button">
-						    Organizations
-					    </div>
-						<div class="infobar-button">
-						    Claims
-					    </div>
-						<div class="infobar-button">
-						    Directories
-					    </div>
-						<div class="infobar-button">
-						    Site Credits
-					    </div>
-					</div>
 					
-<!-- 					495 x 180 11 : 4-->
-					<a class="infobar-module infobar-aesthetic" 
-					   href="http://google.com"
-					   style="background-image: url('https://i.imgur.com/fPJ2QaF.png');">
-						
-					</a>
-					
-				</div>
-				
-				<div class="infobar-info display-none" id="infobar-content-3">
-					<a class="infobar-module infobar-aesthetic" 
-					   href="http://google.com"
-					   style="background-image: url('https://i.imgur.com/fPJ2QaF.png');">
-					</a>
-					
-					<div id="infobar-content-2-1">
-						<div class="infobar-button">
-						    I don't Wanna
-					    </div>
-						<div class="infobar-button">
-						    Care about this
-					    </div>
-						<div class="infobar-button">
-						    Menu for A Bit
-					    </div>
-						<div class="infobar-button">
-						    Please have 
-					    </div>
-						<div class="infobar-button">
-						    a bit of 
-					    </div>
-						<div class="infobar-button">
-						    Mercy
-					    </div> 
-					</div>
-				</div>
-				
-				<div class="infobar-menu">
-					<div class="infobar-button" id="menu-1">
-<!-- 						Links & Guides -->
-						 <i class="fas fa-book fa-lg"></i>
-					</div> 
-					<div class="infobar-button" id="menu-2">
-<!-- 						Help & Staffs -->
-						 <i class="fas fa-book-reader fa-lg"></i>
-					</div>
-					<div class="infobar-button" id="menu-3">
-<!-- 						News & Events -->
-						<i class="fas fa-calendar fa-lg"></i>
+					<div class="for-guest">
+						<div class="">
+						    welcome, welcome<br>
+					        have a look around ♫
+						</div>
+						<div class="roundUser" style="background-image: url('https://i.imgur.com/z63b0sd.jpg')"></div>
+						<a href="index.php?act=Login&CODE=00">log in</a> ・ <a href="index.php?act=Reg&CODE=00"><b>register</b></a> ・ <a href="index.php?act=Reg&CODE=reval">resend</a>
 					</div>
 					
 				</div>
 			</div>
+			<div class="header-box flex-center" style="margin-top: 0px;">
+				<div class="header-inner-box">
+					<div class="header-notice">
+					    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis orci sodales, vestibulum erat pretium, scelerisque lacus. Fusce vel tellus efficitur, tempor augue nec, porttitor orci. Praesent ac justo nunc. Duis ut placerat nisi, ut ultrices lectus. Integer id nibh vitae ex dictum euismod at auctor velit. Duis ut placerat nisi, ut ultrices lectus. Integer id nibh vitae ex dictum euismod at auctor velit. Duis ut placerat nisi, ut ultrices lectus. Integer id nibh vitae ex dictum euismod at auctor velit. 
+					</div>
+				</div>
+			</div>
+			<div class="header-logo-pic">
+				<div class="header-pic">
+					<!--7:5-->
+				</div>
+			</div>
 		</div>
+		
+		<div class="header-menu">
+			<div class="menu-box header-mood-staff">
+				<div class="header-mood-staff-1 site-mood-pic-1">
+				</div>
+				<div class="header-mood-staff-1 staff-corner" style="margin-top: 0px">
+					<!--staff #1-->
+					<div class="staff-icon">
+						<div class="staff-icon-1"
+							 style="background-image: url('https://i.imgur.com/Dxu9XRr.jpg')"></div>
+					</div>
+					<!--staff #1-->
+					<div class="staff-icon">
+						<div class="staff-icon-1"
+							 style="background-image: url('https://i.imgur.com/z63b0sd.jpg')"></div>
+					</div>
+					<!--staff #1-->
+					<div class="staff-icon">
+						<div class="staff-icon-1"
+							 style="background-image: url('https://i.imgur.com/z63b0sd.jpg')"></div>
+					</div>
+					<!--staff #1-->
+					<div class="staff-icon">
+						<div class="staff-icon-1"
+							 style="background-image: url('https://i.imgur.com/z63b0sd.jpg')"></div>
+					</div>
+				</div>
+			</div>
+			<div class="menu-box header-news-event">
+				<div class="header-news-event-1 news-section">
+					<div><b>( Feb 22nd ) - </b>Donec a porttitor turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at magna sit amet felis iaculis vestibulum vel vitae risus. Donec iaculis augue ut sem porttitor tincidunt. Donec a porttitor turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at magna sit amet felis iaculis vestibulum vel vitae risus. Donec iaculis augue ut sem porttitor tincidunt.
 
-      <div class="categoryTitle" id="categoryTitle-1">
+</div>
+				</div>
+				<div class="header-news-event-1" style="margin-left:0px"> 
+					<div class="site-event-pic flex-center event-on "> <!--event-off or event-on-->
+						<div>
+							<center><b>(EVENT ONGOING)</b></center>
+							
+							blurb for events. Not too many because scrolls won't look good here, so make it brief! This turns off if there's no events.
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="menu-box header-quicklinks">
+				<div class="header-links flex-center">guidelines</div>
+				<div class="header-links flex-center">plot & setting</div>
+				<div class="header-links flex-center">factions</div>
+				<div class="header-links flex-center">claims directory</div>
+				<div class="header-links flex-center">advertisements</div>
+				<div class="header-links flex-center">site credits</div>
+			</div>
+			
+		</div>
+		
+		
+
+      <div class="categoryTitle flex-center" id="categoryTitle-1">
             beneath the gazing stars
       </div>
       <div class="category" id="originBoard">
@@ -291,7 +252,7 @@
         </div>
       </div>
 
-      <div class="categoryTitle" id="categoryTitle-2">
+      <div class="categoryTitle flex-center" id="categoryTitle-2">
 		  vales deep and forests dark
 		</div>
       <div class="category" id="allyBoard">
@@ -405,7 +366,7 @@
         </div>
       </div>
 
-      <div class="categoryTitle" id="categoryTitle-3">
+      <div class="categoryTitle flex-center" id="categoryTitle-3">
 		  betrayed by loyal hands
 		</div>
       <div class="category" id="hostileBoard">
@@ -516,9 +477,9 @@
 						</div>
 						</div>
 					</div>
-					<div class="welcome-guest-text">
+					<div class="welcome-user-text">
 						please welcome<br>
-						<div class="welcome-guest-name">mr. lorem ipsum</div>
+						<div class="welcome-user">mr. lorem ipsum</div>
 					</div>
 					<div class="under-guest-text-stat">
 						<div class="stat-box">
