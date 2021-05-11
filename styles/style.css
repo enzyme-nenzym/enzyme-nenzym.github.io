@@ -582,7 +582,7 @@ CONFIGURATIONS
 
 .left-stat {
 	border: 1px solid silver;
-	border-left: 15px solid var(--site-black);
+	border-left: 10px solid var(--site-black);
 	margin: 10px;
 	width: 35%;
 	height: 350px;
@@ -592,9 +592,178 @@ CONFIGURATIONS
 	background-color: var(--site-slight-grey);
 	margin: 10px;
 	padding: 10px;
-	height: calc(100% - 40px);
-	width: calc(100% - 40px);
+	height: calc(100% - 43px);
+	width: calc(100% - 45px);
+	border: 1px solid silver;
 }
+
+.right-stat {
+	border: 1px solid silver;
+	margin: 10px;
+	width: 70%;
+	height: 350px;
+	display: flex;
+}
+
+.right-stat-1 {
+	width: 80%;
+	border: 1px solid silver;
+	margin: 10px;
+	margin-right: 5px;
+	height: calc(100% - 43px);
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-around;
+	background-color: var(--site-slight-grey);
+	padding: 10px;
+}
+
+.right-stat-2 {
+	margin: 10px 10px 10px 10px;
+	width: calc(25% - 40px);
+	padding: 30px 0px;
+	background-color: var(--site-black);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.stat-content{
+	height: 20%;
+	width: 50%;
+}
+
+.stat-param {
+	position: absolute;
+	z-index: 1;
+	color: silver;
+	font-size: 30px;
+	opacity: 1;
+	transition-duration: 0.5s;
+}
+
+
+.stat-val {	
+	position: absolute;
+	opacity: 0;
+	font-size: 30px;
+	color: var(--site-white);
+	transition-duration: 0.5s;
+}
+
+.stat-content:hover .stat-param {
+	opacity: 0;
+}
+.stat-content:hover .stat-val {
+	opacity: 1;
+}
+
+
+
+.welcome-area {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+/* 	border: 1px solid silver; */
+	padding-top: 5px;
+}
+
+.welcome-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+.welcome-text-text {
+	font-family: 'Playfair Display', sans-serif;
+	font-weight: 100;
+	font-style: italic;
+	color: var(--site-hard-blue);
+	font-size: 25px;
+}
+
+
+.welcome-pic {
+	border: 1px solid silver;
+	
+}
+
+.welcome-pic-container {
+	padding: 5px;
+	background-color: var(--site-white);
+}
+
+.welcome-pic-pic {
+	background-image: url('https://i.imgur.com/Dxu9XRr.jpg');           width: 75px; 
+	height: 75px; 
+	background-size: cover
+}
+
+.stat-lower-left {
+    flex-grow: 4; 
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+}
+
+.stat-lower-right {
+    flex-grow: 1;
+}
+
+.newbie-pic-container {
+	padding: 5px;
+	background-color: var(--site-white);
+	width: 125px;
+	height: 125px;
+	border: 1px solid silver;
+}
+
+.newbie-pic {
+	background-image: url('https://i.imgur.com/Dxu9XRr.jpg');
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.online-list {
+	height: 44.5%;
+	font-size: 25px;
+	overflow-y: auto;
+	border-bottom: 1px solid SILVER;
+	text-transform: lowercase;
+	font-family: 'Playfair Display', sans-serif;
+	font-weight: 100;
+/* 	font-style: italic; */
+	color: grey;
+/* 	padding: 5px; */
+}
+
+.online-today-container {
+}
+
+.online-today {
+ 	margin: 5px;
+	margin-right: 15px;
+	padding: 5px;
+	padding-top: 5px;
+	overflow-y: auto;
+	height: 40px;
+	text-transform: lowercase;
+	background-color: var(--site-slight-grey);
+	width: calc(100% - 25px);
+	border: 1px solid silver;
+}
+
+.welcome-container {
+	margin-right: 10px;
+}
+
+
 
 .recent-topic-1 {
 	margin: 5px 0px;
@@ -635,40 +804,12 @@ CONFIGURATIONS
 	font-size: 13px;
 }
 
-
-.right-stat {
-	border: 1px solid silver;
-	margin: 10px;
-	width: 70%;
-	height: 350px;
-	
-}
-
 .aesthetic-bar {
-  border: 1px solid silver;
-  grid-column-start: 2;
-  grid-column-end: 4;
-  background-image: url("https://i.imgur.com/GQSEYku.png");
-  padding: 10px;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+	border: 1px solid silver;
+	background-image: url("https://i.imgur.com/GQSEYku.png");
+	height: 40%;
+	background-size: contain;
 }
-
-.padded-box-1 {
-  padding: 10px;
-  background: var(--background-white-opacity);
-  border: 1px solid silver;
-}
-
-.padded-box-2 {
-  background: var(--site-slight-grey);
-  text-align: justify;
-  padding: 10px;
-  overflow: auto;
-}
-
-
-
 
 .last-post-author {
 	text-transform: uppercase;
@@ -681,12 +822,11 @@ CONFIGURATIONS
   background-color: var(--site-black);
   height: 100px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .stat-footer-icon {
-  color: var(--site-white);
-  /* 	border: 1px solid silver; */
+  color: silver;
   text-align: center;
   width: 50px;
   margin: 0px 10px;
@@ -699,6 +839,7 @@ CONFIGURATIONS
 .online-toggle:hover,
 .infobar-button:hover {
   cursor: pointer;
+	color: var(--site-white);
 }
 
 
@@ -791,6 +932,7 @@ EXPEIRMENT STARTS HERE
   bottom: 50;
   left: 50;
   transition-delay: 0.2s;
+	z-index: 3;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
