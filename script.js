@@ -48,6 +48,15 @@ $(document).ready(function(){
 		}, 1500);  
 	});
 	
+	$.ajax({
+		url: "https://arche-webserver.herokuapp.com/api/getUsers",
+		type: 'GET',
+		success: function(res) {
+			console.log(res);
+		}
+	}); 
+	
+
     
  
 });
@@ -55,7 +64,6 @@ $(document).ready(function(){
 // 1. staff/events infobar
 // 2. 1 more picture for the third bar maybe! 
 // 4. 
-
 
 
 
