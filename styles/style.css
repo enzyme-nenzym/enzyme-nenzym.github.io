@@ -1225,6 +1225,7 @@ input[type="reset"] {
   padding: 15px;
   background-color: #f7f7f7;
   border: 1px solid silver;
+	
 }
 
 .profile-border-1 {
@@ -1232,6 +1233,11 @@ input[type="reset"] {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+	background-image: url('https://i.redd.it/odhv7fom1wy61.jpg');
+	background-repeat: no-repeat;
+	background-blend-mode: screen;
+	background-size: cover;
+	
 }
 
 .profile-area {
@@ -1247,7 +1253,7 @@ input[type="reset"] {
   padding: 25px;
   border-bottom: 15px solid var(--site-black);
   background: var(--user-profile-color);
-  color: var(--site-title);
+  color: var(--site-white);
   height: 70px;
   font-family: "Playfair Display", serif;
   width: calc(100%);
@@ -1258,7 +1264,7 @@ input[type="reset"] {
   height: 600px;
   width: 400px;
   border: 1px solid silver;
-  background-image: url("https://i.imgur.com/6jkJRYl.png");
+  background-image: url("https://i.redd.it/odhv7fom1wy61.jpg");
   background-size: cover;
   border: 10px solid var(--user-profile-color);
   padding: 15px;
@@ -1274,10 +1280,8 @@ input[type="reset"] {
   border: 10px solid var(--user-profile-color);
   width: 600px;
   height: 100px;
-  background-image: url("https://i.imgur.com/24ThuZ5.png");
+  background-image: url("https://i.imgur.com/GQSEYku.png");
   background-size: cover;
-  /* 	background-color: silver;
-	background-blend-mode: luminosity; */
 }
 
 .profile-member {
@@ -1357,9 +1361,18 @@ input[type="reset"] {
 
 .freeform-app {
   flex: 3;
-  padding: 10px 0px;
-  padding-right: 10px;
+/*   padding: 10px 0px; */
+  padding-right: 15px;
   overflow-y: auto;
+	text-align: justify;
+}
+
+.freeform-app::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.freeform-app::-webkit-scrollbar-thumb {
+  background: var(--user-profile-color);
 }
 
 .member-info {
@@ -1383,4 +1396,71 @@ input[type="reset"] {
 .info-title span {
   padding: 10px;
   background-color: var(--user-profile-color);
+}
+
+.freeform-app blockquote {
+	border: 2.5px solid var(--user-profile-color);
+	padding: 5px;
+	border-left: 10px solid var(--user-profile-color);
+}
+
+.freeform-app h1 {
+	font-family: 'Oswald', sans-serif;
+	margin: 10px auto;
+	color: var(--user-profile-color);
+	display: block;
+	border-bottom: solid;
+}
+
+.freeform-app h2 {
+	font-family: 'Oswald', sans-serif;
+	margin: 10px auto;
+	color: var(--user-profile-color);
+	display: block;
+	border-bottom: dashed;
+}
+
+.freeform-app h3 {
+	font-family: 'Oswald', sans-serif;
+	margin: 10px auto 0px;
+	color: var(--user-profile-color);
+	display: block;
+/* 	border-bottom: solid; */
+}
+
+.freeform-app h4 {
+	font-family: 'Oswald', sans-serif;
+	margin: 2.5px 0px;
+	color: var(--user-profile-color);
+	display: inline-block;
+	border: 2px solid var(--user-profile-color);
+	padding: 3px 5px;
+	font-size: 15px;
+	text-transform: uppercase;
+}
+
+.freeform-app h5 {
+	font-family: 'Oswald', sans-serif;
+	margin: 2.5px 0px;
+	background: var(--user-profile-color);
+	display: inline-block;
+	border: 2px solid var(--user-profile-color);
+	color: var(--site-white);
+	padding: 3px 5px;
+	font-size: 15px;
+	text-transform: uppercase;
+}
+
+.freeform-app b {
+	color: var(--user-profile-color);
+	font-weight: 800;
+}
+
+.freeform-app span {
+	color: var(--user-profile-color);
+	font-weight: 100;
+}
+
+.freeform-app i {
+	color: var(--user-profile-color);
 }
