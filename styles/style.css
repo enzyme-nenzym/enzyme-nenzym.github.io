@@ -910,10 +910,10 @@ EXPEIRMENT STARTS HERE
 }
 
 .tableborder {
-	background-color: var(--site-white);
-	border: 1px solid silver;
-	padding: 10px;
-	padding-bottom: 5px;
+/* 	background-color: var(--site-white); */
+/* 	border: 1px solid silver; */
+/* 	padding: 10px;
+	padding-bottom: 5px; */
 	margin: 0;
 }
 
@@ -1465,6 +1465,11 @@ input[type="reset"] {
 
 .color-border {
 	
+}
+
+.post-cp {
+	border: 1px solid silver;
+	background: var(--site-white);
 }
 
 .post-membergroup {
