@@ -792,7 +792,7 @@ CONFIGURATIONS
 }
 
 .credits {
-  margin-top: 10px;
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -1056,7 +1056,7 @@ td.darkrow2 {
 
 .button-large {
 	text-align: center;
-	margin: 0px 0px 5px 5px;
+	margin:0px 5px 0px 5px;
 	min-width: 75px;
 	display: inline-block;
 	color: var(--site-white);
