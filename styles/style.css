@@ -8,7 +8,7 @@
 	--background-white-opacity: rgba(255, 255, 255, 0.5);
 	--site-harden-bg: rgba(0, 0, 0, 0.05);
 	--user-profile-color: #455873;
-	--nav-button-color: rgba(29,53,87, 0.6); /* preferably the rgba of main context color*/
+	--main-accent-opacity: rgba(29,53,87, 0.7); /* preferably the rgba of main context color*/
 }
 
 @media screen and (max-device-width: 480px) {
@@ -944,9 +944,9 @@ EXPEIRMENT STARTS HERE
 }
 
 .topic-title {
-	font-family: "Merriweather", serif;
+	font-family: "Quicksand", serif;
 	font-weight: 300;
-	font-size: 40px;
+	font-size: 30px;
 	justify-content: space-between;
 	color: black;
 }
@@ -954,6 +954,10 @@ EXPEIRMENT STARTS HERE
 .maintitle {
 	padding: 2px 0px;
 	border-bottom: 5px solid black;
+	white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
 }
 
 .maintitle a:link,
@@ -1163,6 +1167,8 @@ input[type="reset"] {
 	background-repeat: no-repeat;
 	background-blend-mode: screen;
 	background-size: cover;
+	border: 1px solid silver;
+	border-bottom: 0px;
 	
 }
 
@@ -1184,6 +1190,7 @@ input[type="reset"] {
   font-family: "Playfair Display", serif;
   width: calc(100%);
   text-transform: lowercase;
+	width: calc(100% - 48px);
 }
 
 .profile-picture-large {
@@ -1307,7 +1314,9 @@ input[type="reset"] {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0px 20px;
+  padding: 20px 20px;
+	height: calc(100% - 40px);
+	overflow-y: auto;
 }
 
 .info-title {
@@ -1327,57 +1336,75 @@ input[type="reset"] {
 	border: 2.5px solid var(--user-profile-color);
 	padding: 5px;
 	border-left: 10px solid var(--user-profile-color);
+    margin-top: 10px;
 }
 
 .freeform-app h1 {
-	font-family: 'Oswald', sans-serif;
+	border-bottom: 5px solid var(--user-profile-color);
+	font-family: "Merriweather", serif;
+	font-weight: 300;
+	font-size: 40px;
+	letter-spacing: -1px;
 	margin: 10px auto;
-	color: var(--user-profile-color);
-	display: block;
-	border-bottom: solid;
+	text-transform: uppercase;
+/*   color: var(--user-profile-color); */
 }
 
 .freeform-app h2 {
-	font-family: 'Oswald', sans-serif;
-	margin: 10px auto;
-	color: var(--user-profile-color);
+	font-family: "Merriweather", serif;
+	color: var(--site-black);
 	display: block;
-	border-bottom: dashed;
+	margin: 10px auto;
+	font-weight: 400;
+	letter-spacing: -1px;
+  color: var(--user-profile-color);
 }
 
 .freeform-app h3 {
-	font-family: 'Oswald', sans-serif;
-	margin: 10px auto 0px;
-	color: var(--user-profile-color);
+	font-family: "Merriweather", serif;
+	color: var(--site-black);
 	display: block;
+	margin: 10px auto;
+	font-style: italic;
+	font-weight: 800;
+	letter-spacing: -1.5px;
+  color: var(--user-profile-color);
 }
 
 .freeform-app h4 {
-	font-family: 'Oswald', sans-serif;
-	margin: 2.5px 0px;
+	font-family: "Merriweather", serif;
 	color: var(--user-profile-color);
 	display: inline-block;
 	border: 2px solid var(--user-profile-color);
 	padding: 3px 5px;
 	font-size: 15px;
 	text-transform: uppercase;
+	margin: 5px 2px;
 }
 
 .freeform-app h5 {
-	font-family: 'Oswald', sans-serif;
-	margin: 2.5px 0px;
-	background: var(--user-profile-color);
+	font-family: "Merriweather", serif;
+	color: var(--site-white);
 	display: inline-block;
 	border: 2px solid var(--user-profile-color);
-	color: var(--site-white);
 	padding: 3px 5px;
 	font-size: 15px;
 	text-transform: uppercase;
+	margin: 5px 2px;
+	background: var(--user-profile-color);
+	letter-spacing: 2px;
 }
 
+.freeform-app p {
+	margin: 10px 20px;
+}
+
+
 .freeform-app b {
+	font-family: "Merriweather", serif;
 	color: var(--user-profile-color);
 	font-weight: 800;
+	letter-spacing: 1px;
 }
 
 .freeform-app span {
@@ -1386,7 +1413,23 @@ input[type="reset"] {
 }
 
 .freeform-app i {
+	font-family: "Merriweather", serif;
 	color: var(--user-profile-color);
+	font-size: 17px;
+	font-weight: 500;
+}
+
+.user-misc-info {
+	background-color: var(--user-profile-color);
+	padding: 5px 5px;
+	color: var(--site-white);
+	margin: 5px 10px 5px;
+	font-size: 15px;
+	font-family: "Oswald", sans-serif;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 2px;
+	border: 3px solid var(--site-white);
 }
 
 /* THREAD - POST - AREA */
@@ -1428,33 +1471,94 @@ input[type="reset"] {
 
 .hover-panel {
 	width: 30%;
-/* 	border:1px solid silver; */
-	min-height: 500px;
 	border: 1px solid silver;
 	border-bottom: 0px;
 }
 
 .user-hover-container {
-/* 	width: 300px; */
 	border: 1px solid silver;
-	padding: 10px;
+	padding: 10px; 
 	margin: 10px;
 	background: var(--site-white);
 }
 
-.user-hover-container div {
+.user-picture-hover {
+	position: relative;
+	background: var(--main-accent-opacity);
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition-duration: 0.75s;
+	transform: translate(0px, 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.post-user-picture {
 	background-image: url("https://i.redd.it/odhv7fom1wy61.jpg");
 	background-size: cover;
 	height: 100%;
 	height: 450px;
 	min-width: 100%;
+	overflow: hidden;
+}
+
+.post-user-picture:hover .user-picture-hover{
+	opacity: 1;
+	transform: translate(0px, 0%);
+}
+
+.post-cfield {
+	width: calc(100% - 40px);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0px 30px 20px;
+	padding: 0px 5px;
+	color: var(--site-white);
+	border-bottom: 2px solid var(--site-white);
+}
+
+.post-cfield-param {
+	font-family: 'Oswald', sans-serif; 
+	font-weight: 800;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.pair-quotes {
+	margin-top: 30px;
+	font-style: italic;
+	font-family: "Playfair Display", serif;   
+	color: var(--site-white);
+	margin-bottom: 10px;
+	text-align: center;
+	font-size: 20px;
+	width: 80%;
 }
 
 .post-panel {
 	width: 70%;
 	border-right:1px solid silver;
-	min-height: 500px;
 	padding: 10px 15px;
+	font-size: 20px;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.post-panel b {
+	font-weight: 600;
+}
+
+.post-panel i {
+	color: var(--site-hard-blue);
+	font-weight: 400;
+}
+
+.post-panel blockquote {
+	text-align: justify;
+	margin: 30px 70px;
 }
 
 .post-pic-container {
@@ -1463,13 +1567,18 @@ input[type="reset"] {
 	background-color: var(--site-white);
 }
 
-.color-border {
-	
-}
 
 .post-cp {
 	border: 1px solid silver;
 	background: var(--site-white);
+}
+
+.profile-cp {
+/* 	border: 1px solid silver; */
+	background: var(--user-profile-color);
+	flex-flow: row wrap;
+	padding: 10px 30px;
+	width: calc(100% - 58px);
 }
 
 .post-membergroup {
@@ -1483,4 +1592,40 @@ input[type="reset"] {
 	font-weight: 800;
 	letter-spacing: 2px;
 	border: 3px solid var(--site-hard-blue);
+}
+
+.award-container{
+	height: 125px; /*configure according to badge size*/
+	width: calc(100% - 23px);
+	border: 1px solid silver;
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.award-title{
+	border-bottom: 1px solid silver;
+	height: 30px;
+	width: 100%;
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 2px;
+	font-weight: 800;
+	color: var(--site-hard-blue);
+	background: var(--site-white);
+	background-blend-mode: screen;
+}
+
+.award-box {
+	height: 100%;
+	width: 100%;
+	overflow-y: auto;
+	flex-flow: row wrap;
+}
+
+.award-size {
+	width: 35px; 
+	height: 35px;
+/* 	border-radius: 100%; */
+	margin: 5px 7.5px;
+	background: var(--site-hard-blue);
 }
